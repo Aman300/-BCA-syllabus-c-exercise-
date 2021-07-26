@@ -34,6 +34,6 @@ int main()
         cout<<"Name of consumer = "<<name<<endl;
         cout<<"Total Bill amount = " <<result;
     }
-    return 0;
+   return 0;
 }
 
