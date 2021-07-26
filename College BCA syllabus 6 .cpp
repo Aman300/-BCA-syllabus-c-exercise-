@@ -12,16 +12,16 @@ void swap_value(int x,int y)
     cout<<"After swaping y = "<<y<<endl;
     
 }
-void swap_rafrance(int x,int y)
+void swap_rafrance(int *x,int *y)
 {
     int temp;
-    temp=x;
-    x=y;
-    y=temp;
-    cout<<"Before swaping y = "<<y<<endl;;
-    cout<<"Before swaping x = "<<x<<endl;;
-    cout<<"After swaping x = "<<x<<endl;
-    cout<<"After swaping y = "<<y<<endl;
+    temp=*x;
+    *x=*y;
+    *y=temp;
+    cout<<"Before swaping y = "<<*y<<endl;;
+    cout<<"Before swaping x = "<<*x<<endl;;
+    cout<<"After swaping x = "<<*x<<endl;
+    cout<<"After swaping y = "<<*y<<endl;
 }
 int main()
 {
@@ -32,15 +32,19 @@ int main()
     cin>>num;
     switch(num)
     {
-        case 1: 
-            swap_value(10,20);
+        case 1:
+            cout<<"Ente the first number:";
+            cin>>n1;
+            cout<<"Enter the second number:";
+            cin>>n2;
+            swap_value(n1,n2);
             break;
         case 2: 
             cout<<"Ente the first number:";
             cin>>n1;
             cout<<"Enter the second number:";
             cin>>n2;
-            swap_rafrance(n1,n2);
+            swap_rafrance(&n1,&n2);
             break;
     }
 }
