@@ -46,5 +46,5 @@ int main()
             cin>>n2;
             swap_rafrance(&n1,&n2);
             break;
-    }
+     }
 }
